@@ -21,14 +21,8 @@ export const metadata: Metadata = {
     "A customer platform where commercial teams work better. We build and deploy frontier technologies—integrating data, AI and collaboration—that empower industry leaders to acquire and grow lifelong revenue.",
   icons: {
     icon: [
-      {
-        url: "https://framerusercontent.com/images/Ryii4s5qcjHmFMxKyur3Yasiv8.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "https://framerusercontent.com/images/FzOwtYGb8lDLgTJJWTwcLl3edM.png",
-        media: "(prefers-color-scheme: dark)",
-      },
+      { url: "https://framerusercontent.com/images/Ryii4s5qcjHmFMxKyur3Yasiv8.png", media: "(prefers-color-scheme: light)" },
+      { url: "https://framerusercontent.com/images/FzOwtYGb8lDLgTJJWTwcLl3edM.png", media: "(prefers-color-scheme: dark)" },
     ],
     apple: "https://framerusercontent.com/images/Z5mji5haekEFlBD0voWyUTQce6M.png",
   },
@@ -41,16 +35,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

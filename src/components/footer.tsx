@@ -1,4 +1,4 @@
-const footerColumns = [
+const columns = [
   {
     title: "About",
     links: [
@@ -64,7 +64,7 @@ const footerColumns = [
       { label: "Customer Success Software", href: "#" },
       { label: "Customer Health Score", href: "#" },
       { label: "Customer Success Playbooks", href: "#" },
-      { label: "Customer Success metrics", href: "#" },
+      { label: "Customer Success Metrics", href: "#" },
       { label: "AI in Customer Success", href: "#" },
       { label: "Lifecycle Management", href: "#" },
     ],
@@ -73,21 +73,16 @@ const footerColumns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 px-6 pb-8 pt-16">
+    <footer className="border-t border-black/10 px-6 pb-8 pt-16">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          {footerColumns.map((col) => (
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="mb-4 text-xs font-medium uppercase tracking-widest text-muted-text">
-                {col.title}
-              </h4>
+              <h4 className="mb-4 text-xs font-medium uppercase tracking-[0.15em] text-[#575551]">{col.title}</h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted-text transition-colors hover:text-foreground"
-                    >
+                    <a href={link.href} className="text-sm text-[#575551] transition-colors hover:text-black">
                       {link.label}
                     </a>
                   </li>
@@ -96,30 +91,14 @@ export function Footer() {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 md:flex-row">
-          <p className="text-xs text-muted-text">
-            &copy; 2026 Planhat inc.
-          </p>
-          <div className="flex items-center gap-4 text-xs text-muted-text">
-            <a href="#" className="hover:text-foreground">
-              Status
-            </a>
-            <a href="#" className="hover:text-foreground">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-foreground">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-foreground">
-              Brand Guidelines
-            </a>
-            <a
-              href="https://www.linkedin.com/company/planhat"
-              className="hover:text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-8 md:flex-row">
+          <p className="text-xs text-[#575551]">&copy; 2026 Planhat inc.</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[#575551]">
+            <a href="#" className="hover:text-black">Status</a>
+            <a href="#" className="hover:text-black">Terms of Service</a>
+            <a href="#" className="hover:text-black">Privacy Policy</a>
+            <a href="#" className="hover:text-black">Brand Guidelines</a>
+            <a href="https://www.linkedin.com/company/planhat" className="hover:text-black" target="_blank" rel="noopener noreferrer">
               Follow us
             </a>
           </div>
